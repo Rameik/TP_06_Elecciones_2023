@@ -1,0 +1,102 @@
+@{
+    ViewData["Title"] = "Detalle Candidato";
+}
+
+<style>
+    h1{
+        color: #eceff1;
+    }
+
+    .titulo{
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 0;
+    }
+
+    body{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/imagenes/fondo.jpg);
+        background-size: cover;
+        text-align: center;
+    }
+
+    .titulo p{
+        color: #cb8611;
+        font-size: 30px;
+    }
+
+    .descripcion p{
+        color: #cb8611;
+    }
+
+    .descripcion{
+        font-size: 25px;
+        margin-top: 1%;
+    }
+
+    .btn-volver a{
+        transition: all 0.6s ease;
+        position: relative;
+        padding: 0.5% 1%;
+        text-decoration: none;
+        color: #fff;
+        z-index: 2;
+    }
+
+    .btn-volver a::after{
+        content: "";
+        position: absolute;
+        width: 10%;
+        height: 110%;
+        left: -10%;
+        top: 0;
+        transform: skew(20deg, 0deg);
+        background-color: #b66f13;
+        z-index: -1;
+        transition: all 0.4s ease;
+    }
+
+    .btn-volver a::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform: skew(20deg, 0deg);
+        border: 3px solid #b66f13;
+        transition: all 0.4s ease;
+        z-index: -1;
+    }
+
+    .btn-volver a:hover::after{
+        background-color: #ffffff31;
+        transform: skew(20deg, 0deg) translateX(105px);
+    }
+
+    .btn-volver a:hover::before{
+        background-color: #cb8611;
+        border: 3px solid #b66f13;
+        transform: skew(20deg, 0deg) scale(1.1);
+    }
+
+    .btn-volver{
+        display: flex;
+        justify-content: center;
+        margin-top: 1%;
+    }
+
+    .imagen-candidato{
+        border-radius: 30px;
+        width: 35%;
+    }
+</style>
+
+<body>
+    <h1 class="titulo">Detalle del Candidato <p>@ViewBag.DatosCandidato.Nombre @ViewBag.DatosCandidato.Apellido</p></h1>
+    <h1 class="descripcion">Foto</h1><img class="imagen-candidato" src="@ViewBag.DatosCandidato.Foto" alt="">
+    <h1 class="descripcion">Fecha Nacimiento <p>@(String.Format("{0:dd/MM/yyyy}",ViewBag.DatosCandidato.FechaNacimiento))</p></h1>
+    <h1 class="descripcion">Postulacion <p>@ViewBag.DatosCandidato.Postulacion</p></h1>
+    <div class="btn-volver">
+        <a class="button" href='@Url.Action("VerDetallePartido", new{idPartido = @ViewBag.DatosCandidato.IdPartido})'>Volver</a>
+    </div>
+</body>

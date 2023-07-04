@@ -1,0 +1,102 @@
+
+.partido{
+    text-align: center;
+    float: left;
+    height: 10%;
+    width: 29%;
+    position: relative;
+    margin: 2%;
+}
+
+.partido:hover .boton-detalle{
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+.contenedor{
+    margin-bottom: 2%;
+    justify-content: center;
+    margin-left: 4%;
+    margin-top: 7%;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/imagenes/fondo.jpg);
+    background-size: cover;
+}
+
+h1{
+    color: #eceff1;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.nombrePartido{
+    font-size: 30px;
+    border-radius: 0 0 15px 15px;
+    margin-top: -8px;
+    background-color: #0979b0;
+}
+
+.boton-detalle {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.partido:hover .boton-detalle{
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+.partido img{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.boton-detalle a{
+    border-radius: 30px;
+    padding: 1%;
+    border: none;
+    background-color: #cb8611;
+    color: #eceff1;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border: 3px solid #cb8611;
+}
+
+.boton-detalle a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: -200%;
+    background-color: #f9b70e;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.boton-detalle a:hover:before{
+    top: 0;
+    border-radius: 0%;
+}

@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\TP_06_Elecciones_2023.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TP_06_Elecciones_2023.bundle.scp.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\wwwroot\\BD_Elecciones.sql",
+      "PackagePath": "staticwebassets\\BD_Elecciones.sql"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\wwwroot\\css\\agregarCandidatoStyle.css",
+      "PackagePath": "staticwebassets\\css\\agregarCandidatoStyle.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\wwwroot\\css\\detallePartidoStyle.css",
+      "PackagePath": "staticwebassets\\css\\detallePartidoStyle.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\wwwroot\\css\\indexStyle.css",
+      "PackagePath": "staticwebassets\\css\\indexStyle.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\wwwroot\\imagenes\\argentina.png",
+      "PackagePath": "staticwebassets\\imagenes\\argentina.png"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\wwwroot\\imagenes\\favicon.ico",
+      "PackagePath": "staticwebassets\\imagenes\\favicon.ico"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\wwwroot\\imagenes\\fondo.jpg",
+      "PackagePath": "staticwebassets\\imagenes\\fondo.jpg"
+    },
+    {
+      "Id": "Z:\\4to\\Programacion\\TP_06_Elecciones_2023\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.TP_06_Elecciones_2023.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.TP_06_Elecciones_2023.props",
+      "PackagePath": "build\\TP_06_Elecciones_2023.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.TP_06_Elecciones_2023.props",
+      "PackagePath": "buildMultiTargeting\\TP_06_Elecciones_2023.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.TP_06_Elecciones_2023.props",
+      "PackagePath": "buildTransitive\\TP_06_Elecciones_2023.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

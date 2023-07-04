@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Agregar Candidato";
+}
+
+<link rel="stylesheet" href="/css/agregarCandidatoStyle.css">
+<h1 class="titulo">Agregar Candidato</h1>
+
+<form action='@Url.Action("GuardarCandidato")' method="post" enctype="multipart/form-data">
+    <input type="hidden" name="can.IdPartido" value="@ViewBag.IdPartido" autocomplete="off">
+    
+    <div class="campo">
+        <p>Foto archivo</p>
+        <div class="file-select" id="archivo">
+            <input type="file" name="archivo" aria-label="Archivo" required>
+        </div>
+    </div>
+
+    <div class="campo">
+        <p>Nombre</p>
+        <input type="text" name="can.Nombre" required autocomplete="off">
+    </div>
+
+    <div class="campo">
+        <p>Apellido</p>
+        <input type="text" name="can.Apellido" required autocomplete="off">
+    </div>
+
+    <div class="campo">
+        <p>Postulacion</p>
+        <input type="text" name="can.Postulacion" required autocomplete="off">
+    </div>
+
+    <div class="campo">
+        <p>Fecha Nacimiento</p>
+        <input type="date" name="can.FechaNacimiento" required autocomplete="off">
+    </div>
+    <input type="submit">
+</form>

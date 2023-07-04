@@ -1,0 +1,79 @@
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/imagenes/fondo.jpg);
+    background-size: cover;
+}
+
+h1{
+    color: #eceff1;
+}
+
+.titulo{
+    font-size: 50px;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    color: #eceff1;
+}
+
+form input{
+    background-color: #cb8611;
+    border-radius: 30px;
+    color: #eceff1;
+    border: none;
+    margin-bottom: 1%;
+}
+
+form input[type="text"], input[type="date"]{
+    padding: 0 0.5%;
+    margin-bottom: 1%;
+}
+
+form input[type=submit] {
+    padding: 0.2% 0.5%;
+    background:#b66f13; 
+    border:0 none;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-bottom: 1%;
+}
+
+form{
+    text-align: center;
+}
+
+.file-select {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 1%;
+}
+
+.file-select::before {
+    background-color: #cb8611;
+    color: #eceff1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    content: 'Seleccionar';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.file-select input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+}
+
+#archivo::before {
+    content: 'Seleccionar Archivo';
+}
+

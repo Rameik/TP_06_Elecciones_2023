@@ -1,0 +1,236 @@
+h1{
+    color: #eceff1;
+}
+
+.titulo{
+    font-size: 50px;
+    margin-bottom: 2%;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/imagenes/fondo.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.titulo p{
+    color: #cb8611;
+    font-size: 30px;
+}
+
+.titulo2{
+    font-size: 50px;
+}
+
+.descripcion p{
+    color: #cb8611;
+    margin-bottom: 1%;
+}
+
+.descripcion{
+    font-size: 25px;
+}
+
+.btn-sitioWeb, .btn-agregar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+
+.btn-sitioWeb a{
+    border-radius: 30px;
+    background-color: #cb8611;
+    color: #eceff1;
+    padding: 0 0.5%;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border: 3px solid #cb8611;
+}
+
+.btn-sitioWeb a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: -200%;
+    background-color: #f9b70e;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.btn-sitioWeb a:hover:before{
+    top: 0;
+    border-radius: 0%;
+}
+
+.partido{
+    text-align: center;
+    float: left;
+    height: 10%;
+    width: 29%;
+    position: relative;
+    margin: 2%;
+}
+
+.partido:hover .boton-detalle{
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+.contenedor{
+    justify-content: center;
+    width: 100%;
+}
+
+.nombreCandidato{
+    font-size: 30px;
+    border-radius: 0 0 15px 15px;
+    margin-top: -8px;
+    background-color: maroon;
+}
+
+.boton-detalle {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.partido:hover .boton-detalle{
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+.partido img{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.boton-detalle .detalle{
+    border-radius: 30px;
+    padding: 1%;
+    border: none;
+    background-color: #cb8611;
+    color: #eceff1;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border: 3px solid #cb8611;
+}
+
+.boton-detalle .detalle::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: -200%;
+    background-color: #f9b70e;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.boton-detalle .detalle:hover:before{
+    top: 0;
+    border-radius: 0%;
+}
+
+.boton-eliminar {
+    border-radius: 30px;
+    padding: 1%;
+    border: none;
+    background-color: crimson;
+    color: #eceff1;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border: 3px solid crimson;
+    margin-left: 4%;
+}
+
+.boton-eliminar::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: -200%;
+    background-color: #8B0000;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    z-index: -1;
+}
+
+.boton-eliminar:hover:before{
+    top: 0;
+    border-radius: 0%;
+}
+
+.btn-agregar a{
+    border: 3px solid #cb8611;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    z-index: 2;
+    padding: 0 0.5%;
+}
+
+.btn-agregar a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #cb8611;
+    z-index: -2;
+}
+
+.btn-agregar a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    left: 0;
+    bottom: -150%;
+    border-radius: 30%;
+    background-color: #f9b70e;
+    
+    z-index: -1;
+}
+
+.btn-agregar a:hover::before{
+    animation: btn-agregar 2s linear both;
+}
+
+
+@keyframes btn-agregar {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        bottom: 100px;
+        transform: rotate(360deg);
+        
+    }
+}

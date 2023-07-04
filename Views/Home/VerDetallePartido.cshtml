@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Detalle Partido";
+}
+
+<link rel="stylesheet" href="/css/detallePartidoStyle.css">
+
+<body>
+    <h1 class="titulo">Detalles del Partido <p>@ViewBag.DatosPartido.Nombre</p></h1>
+    <h1 class="descripcion">Sitio Web</h1>
+    <div class="btn-sitioWeb">
+        <a href="@ViewBag.DatosPartido.SitioWeb">Dirigirse</a>
+    </div>
+    <h1 class="descripcion">Fecha Fundacion <p>@(String.Format("{0:dd/MM/yyyy}",ViewBag.DatosPartido.FechaFundacion))</p></h1>
+    <h1 class="descripcion">Cantidad Diputados<p>@ViewBag.DatosPartido.CantidadDiputados</p></h1>
+    
+    <h1 class="descripcion">Cantidad Senadores <p> @ViewBag.DatosPartido.CantidadSenadores</p></h1>
+
+    @if(ViewBag.ListaCandidatos.Count != 0){
+        <h1 class="titulo2">Candidatos</h1>
+        <div class="btn-agregar">
+            <a href='@Url.Action("AgregarCandidato", new{idPartido = ViewBag.DatosPartido.IdPartido})'>Agregar candidato</a>
+        </div>
+        <div class="contenedor">
+            @foreach (var item in ViewBag.ListaCandidatos)
+            {
+                <div class="partido">
+                    <img src="@item.Foto" alt="">
+                    <h1 class="nombreCandidato">@item.Nombre @item.Apellido</h1>
+                    <div class="boton-detalle">
+                        <a class="detalle" href='@Url.Action("VerDetalleCandidato", new{idCandidato = @item.IdCandidato})'>Ver detalle candidato</a>
+                        <a class="boton-eliminar" href='@Url.Action("EliminarCandidato", new{idCandidato = @item.IdCandidato, idPartido = @item.IdPartido})'>Eliminar Candidato</a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else{
+        <h1 class="titulo2">Parece que todavia no hay ningun candidato agregado</h1>
+        <div class="btn-agregar">
+            <a href='@Url.Action("AgregarCandidato", new{idPartido = ViewBag.DatosPartido.IdPartido})'>Agregar candidato</a>
+        </div>
+    }
+</body>
+
